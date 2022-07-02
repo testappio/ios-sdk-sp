@@ -13,7 +13,7 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .binaryTarget(name: "TestAppIOSDK", path: "../Products/xcframeworks/TestAppIOSDK.xcframework.zip"),
+        .binaryTarget(name: "TestAppIOSDK", path: "TestAppIOSDK.xcframework.zip"),
 //        .binaryTarget(
 //            name: "TestAppIOSDK",
 //            url: "https://drive.google.com/file/d/172Cpg_GJzC_MdFVJ_84hKoiKEmZWaMjK/view?usp=sharing",
