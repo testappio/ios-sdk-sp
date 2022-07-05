@@ -1,0 +1,179 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TestAppIOSDK
+import AVFoundation
+import AVKit
+import Combine
+import CoreGraphics
+import FileProvider
+import Foundation
+import KeychainSwift
+import Photos
+import PhotosUI
+import ReplayKit
+import Swift
+import TinyConstraints
+import UIKit
+import UserNotifications
+import _Concurrency
+public struct TestAppConfiguration {
+  public enum Invocation {
+    case shake
+    case trippleTap
+    public static func == (a: TestAppIOSDK.TestAppConfiguration.Invocation, b: TestAppIOSDK.TestAppConfiguration.Invocation) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(invocations: [TestAppIOSDK.TestAppConfiguration.Invocation])
+}
+@_hasMissingDesignatedInitializers public class TestAppio {
+  public static var shared: TestAppIOSDK.TestAppio!
+  @objc public func show()
+  @objc public func hide()
+  @objc deinit
+}
+extension TestAppIOSDK.TestAppio {
+  public static func setup(with configuration: TestAppIOSDK.TestAppConfiguration)
+  @available(iOS 13.0, *)
+  public static func setup(scene: UIKit.UIWindowScene, with configuration: TestAppIOSDK.TestAppConfiguration)
+  public static func identify(apiToken: Swift.String, userID: Swift.String, traits: [Swift.String : Swift.String])
+}
+extension UIKit.UIImage {
+  public var template: UIKit.UIImage {
+    get
+  }
+  public var original: UIKit.UIImage {
+    get
+  }
+}
+extension UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) public func setAbsoluteTextInsets(insets: UIKit.UIEdgeInsets)
+  @_Concurrency.MainActor(unsafe) public func newHeight(withBaseHeight baseHeight: CoreGraphics.CGFloat, maxHeight: CoreGraphics.CGFloat = .greatestFiniteMagnitude) -> CoreGraphics.CGFloat
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var layerCornerRadius: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var borderColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var borderWidth: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var layerShadowColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var layerShadowOpacity: Swift.Float {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var layerShadowOffset: CoreGraphics.CGSize {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var layerShadowRadius: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var shadowPath: CoreGraphics.CGPath? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public func makeRound()
+  @_Concurrency.MainActor(unsafe) public func clipSubviews(_ clip: Swift.Bool)
+  @available(iOS 11.0, *)
+  @_Concurrency.MainActor(unsafe) public var roundedCorners: QuartzCore.CACornerMask {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var safeInsets: UIKit.UIEdgeInsets {
+    get
+  }
+}
+extension CoreGraphics.CGSize {
+  public var minSide: CoreGraphics.CGFloat {
+    get
+  }
+  public var maxSide: CoreGraphics.CGFloat {
+    get
+  }
+  public init(side: CoreGraphics.CGFloat)
+  public func maxSize(with ratio: CoreGraphics.CGFloat) -> CoreGraphics.CGSize
+}
+extension CoreGraphics.CGPoint {
+  public static func - (lhs: CoreGraphics.CGPoint, rhs: CoreGraphics.CGPoint) -> CoreGraphics.CGPoint
+  public static func + (lhs: CoreGraphics.CGPoint, rhs: CoreGraphics.CGPoint) -> CoreGraphics.CGPoint
+}
+public protocol UIIdentifiable {
+  static var identifier: Swift.String { get }
+}
+extension TestAppIOSDK.UIIdentifiable {
+  public static var identifier: Swift.String {
+    get
+  }
+}
+public enum SupplementaryViewKind {
+  case header
+  case footer
+  case custom(Swift.String)
+  public var kind: Swift.String {
+    get
+  }
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor(unsafe) public func register<Cell>(_ type: Cell.Type) where Cell : UIKit.UICollectionViewCell, Cell : TestAppIOSDK.UIIdentifiable
+  @_Concurrency.MainActor(unsafe) public func register<T>(_ type: T.Type, forSupplementaryViewOfKind kind: TestAppIOSDK.SupplementaryViewKind) where T : UIKit.UICollectionReusableView, T : TestAppIOSDK.UIIdentifiable
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor(unsafe) public func dequeue<R>(for indexPath: Foundation.IndexPath) -> R where R : UIKit.UICollectionViewCell, R : TestAppIOSDK.UIIdentifiable
+  @_Concurrency.MainActor(unsafe) public func dequeueSupplementaryView<R>(for indexPath: Foundation.IndexPath, kind: Swift.String) -> R where R : UIKit.UICollectionReusableView, R : TestAppIOSDK.UIIdentifiable
+  @_Concurrency.MainActor(unsafe) public func dequeue<R>(_ type: R.Type, for indexPath: Foundation.IndexPath) -> R where R : UIKit.UICollectionViewCell, R : TestAppIOSDK.UIIdentifiable
+  @_Concurrency.MainActor(unsafe) public func dequeueSupplementaryView<R>(_ type: R.Type, for indexPath: Foundation.IndexPath, kind: Swift.String) -> R where R : UIKit.UICollectionReusableView, R : TestAppIOSDK.UIIdentifiable
+}
+extension UIKit.UIControl.State : Swift.Hashable {
+}
+public enum WylerError : Swift.Error {
+  case photoLibraryAccessNotGranted
+  public static func == (a: TestAppIOSDK.WylerError, b: TestAppIOSDK.WylerError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+final public class ScreenRecorder {
+  public init()
+  final public func startRecording(to outputURL: Foundation.URL? = nil, size: CoreGraphics.CGSize? = nil, errorHandler: @escaping (Swift.Error) -> Swift.Void)
+  final public func stoprecording(completion: @escaping () -> Swift.Void)
+  @objc deinit
+}
+extension UIKit.UILayoutGuide {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func `in`(_ superView: UIKit.UIView) -> Self
+}
+extension UIKit.UIView {
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func `in`(_ superView: UIKit.UIView) -> Self
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func `in`(_ stackView: UIKit.UIStackView) -> Self
+}
+public protocol Then {
+}
+extension TestAppIOSDK.Then {
+  public func then(_ block: (inout Self) -> Swift.Void) -> Self
+}
+extension TestAppIOSDK.Then where Self : AnyObject {
+  @discardableResult
+  public func then(_ block: (Self) -> Swift.Void) -> Self
+}
+extension ObjectiveC.NSObject : TestAppIOSDK.Then {
+}
+extension TestAppIOSDK.TestAppConfiguration.Invocation : Swift.Equatable {}
+extension TestAppIOSDK.TestAppConfiguration.Invocation : Swift.Hashable {}
+extension TestAppIOSDK.WylerError : Swift.Equatable {}
+extension TestAppIOSDK.WylerError : Swift.Hashable {}
