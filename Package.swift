@@ -19,9 +19,9 @@ let package = Package(
         .target(name: "TestAppIOSDKWrapper",
                 dependencies: [
                     .target(name: "TestAppIOSDK"),
-                    .product(name: "TinyConstraints"),
-                    .product(name: "KeychainSwift"),
-                    .product(name: "TUSKit")
+                    .product(name: "TinyConstraints", package: "TinyConstraints"),
+                    .product(name: "KeychainSwift", package: "keychain-swift"),
+                    .product(name: "TUSKit", package: "TUSKit")
                 ]
         ),
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
