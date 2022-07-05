@@ -8,7 +8,7 @@ let package = Package(
     platforms: [.iOS("11.0")],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(name: "TestAppIOSDK", type: .dynamic, targets: ["TestAppIOSDK"]),
+        .library(name: "TestAppIOSDK", type: .dynamic, targets: ["TestAppIOSDKWrapper"]),
     ],
     dependencies: [
         .package(url: "https://github.com/roberthein/TinyConstraints.git", from: "4.0.0"),
