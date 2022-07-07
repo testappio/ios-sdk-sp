@@ -197,6 +197,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -213,6 +214,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="TestAppIOSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+
+
+@interface NSLayoutConstraint (SWIFT_EXTENSION(TestAppIOSDK))
+- (nonnull instancetype)with:(UILayoutPriority)p SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+
+
 
 
 
@@ -436,6 +448,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -452,6 +465,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="TestAppIOSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+
+
+@interface NSLayoutConstraint (SWIFT_EXTENSION(TestAppIOSDK))
+- (nonnull instancetype)with:(UILayoutPriority)p SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+
+
 
 
 
