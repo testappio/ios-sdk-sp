@@ -195,7 +195,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -214,10 +213,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-
-@interface NSLayoutConstraint (SWIFT_EXTENSION(TestAppIOSDK))
-- (nonnull instancetype)with:(UILayoutPriority)p SWIFT_WARN_UNUSED_RESULT;
-@end
 
 
 
